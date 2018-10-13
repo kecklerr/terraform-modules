@@ -21,3 +21,12 @@ variable "vpc_security_group_ids" {
   description = "vpc security group id for ec2"
 }
 
+variable "ec2_count" {
+  description = "number of ec2 to create"
+  default = 1
+}
+
+variable "key_name" {
+  description = "Key for ssh access"
+  default = ""
+}
