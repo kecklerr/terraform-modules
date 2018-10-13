@@ -3,10 +3,6 @@ variable count {
   default = 1
 }
 
-variable "availability_zone" {
-  description = "the AZ to start the instance in"
-}
-
 variable "ami_id" {
   description = "ID of AMI to use for the instance"
 }
@@ -46,8 +42,8 @@ variable "vpc_security_group_ids" {
   type        = "list"
 }
 
-variable "subnet_id" {
-  description = "The VPC Subnet ID to launch in"
+variable "vpc_id" {
+  description = "vpc id where the ec2s will be created"
 }
 
 variable "associate_public_ip_address" {
