@@ -9,7 +9,6 @@ This setups multiple EC2s with the same volumes for identical servers.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|
-| ebs-1_create | Do we have a ebs volume 1? 0 = no ebs volume  1 = create ebs volume | string | `0` | no |
 | ebs-1_device_name | ebs-1 device name /dev/xvdd /dev/xvdf | list | - | yes |
 | ebs-1_size | size of ebs-1 in GB | string | `1` | no |
 | ec2_count | number of ec2 to create | string | `1` | no |
