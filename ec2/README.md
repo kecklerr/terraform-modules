@@ -4,6 +4,22 @@
 Creates basic ec2 instance based on ami id
 Needs VPC id to select subnet to put the ec2 created
 
+## Module Example
+```
+module "ec2" {
+  source = "../../ec2"
+
+  tags = "${var.tags}"
+  ami_id = "${module.ami.encrypted_id}"
+  count = "${var.ec2_count}"
+
+  vpc_id = "${var.vpc_id}"
+  vpc_security_group_ids = ["${var.vpc_security_group_ids}"]
+  key_name = "${var.key_name}"
+
+}
+```
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -27,6 +43,7 @@ Needs VPC id to select subnet to put the ec2 created
 
 | Name | Description |
 |------|-------------|
+| availability_zone | the availablity zone of the ec2 instance |
 | id | List of IDs of instances |
 | private_dns | List of private DNS names assigned to the instances. Can only be used inside the Amazon EC2, and only available if you've enabled DNS hostnames for your VPC |
 | private_ip | List of private IP addresses assigned to the instances |
