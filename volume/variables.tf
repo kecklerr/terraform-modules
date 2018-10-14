@@ -1,5 +1,6 @@
 variable "device_name" {
   description = "device name to use for ebs volume you are attaching:  /dev/xvdb /dev/xvdc"
+  type = "list"
 }
 
 variable "instance_id" {

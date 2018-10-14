@@ -4,6 +4,7 @@ resource "aws_ami_copy" "encrypted_ami" {
   source_ami_id     = "${data.aws_ami.ami.id}"
   source_ami_region = "${var.region}"
   encrypted         = "true"
+  kms_key_id        = "${var.kms_key_arn}"
 
   tags {
     Name = "encrypted ami from ${data.aws_ami.ami.id}"

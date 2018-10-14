@@ -16,3 +16,8 @@ variable virt_type {
 variable region {
   description = "Region for source ami"
 }
+
+variable kms_key_arn {
+  description = "kms key arn to encrypt"
+  default = ""
+}

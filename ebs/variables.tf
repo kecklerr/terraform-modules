@@ -9,6 +9,7 @@ variable "size" {
 
 variable "availability_zone" {
   description = "AZ where volume is located, must be the same as the ec2"
+  type = "list"
 }
 
 variable "type" {
@@ -30,3 +31,4 @@ variable "count" {
   description = "Number of ebs volumes"
   default = 1
 }
+
